@@ -1,0 +1,81 @@
+  a {
+    color:black;
+    /* a 태그가 달린 모든 내용을 검정색으로 보여줘라 */
+    text-decoration: none;
+    /* a 태그가 달린 모든 텍스트에 꾸밈을 다 없애라 (밑줄 등) */
+
+    /* 모든 설명 끝에는 ; 를 추가하기. 일종의 구분자임 */
+  }
+  /* <style> 내 용어 설명
+- a = Selector, 선택자
+- a {여기 들어가는 거} = 선언, Declaration
+- 선언 내 color:black, color = property, 속성 / red = property value, 속성의 값*/
+
+  body {
+    margin: 0;
+  }
+
+  /* #active {
+    color:red;
+  } */
+  /* ID 값은 한 사이트에 한 개만 가능 */
+
+  /* .saw {
+    color:gray;
+  } */
+  /* .00 = 00태그를 가지고 있는 것에 대해 값을 준다. 앞에 '.' 필수! */
+
+  ol{
+    border-right: 1px solid gray;
+    width:100px;
+    margin: 0;
+    padding: 20px;
+    padding-left: 33px;
+  }
+
+  #grid ol{
+    padding-left: 33px;
+  }
+  /* #grid라는 분모를 가진 ol만 해당되게  */
+
+  h1 {
+    font-size: 300%;
+    /* px로도 지정해도 됨 */
+    /* css text size property 라고 구글에 검색하면 다 나옴
+    용어 - 글자 크기 - 관련 내용(속성) : 구글 검색 tip!*/
+    text-align: center;
+    /* align = 정렬하다 */
+    border-bottom: 1px solid gray;
+    /* 감싸는 상자를 -bottom과 같이 일부만 줄 수 있음. 다만 위치가 애매할 수도 있는데 이건 margin 같은 거 사용해서 조절*/
+    margin:0;
+    padding:20px;
+
+  }
+
+  #grid {
+    border:0px solid pink;
+    display:grid;
+    grid-template-columns : 150px 1fr;
+  }
+
+  #grid #article {
+    padding-left: 25px;
+  }
+  /* 어차피 id가 한개라서 이렇게 두개 안써도 되긴하는데, 분명히 하기 위해 2개 작성 */
+
+  /* screen width < 800px */
+  @media(max-width:800px) {
+    #grid{
+        display: block;
+
+        }
+    ol{
+      border-right: none;
+    }
+    h1 {
+      border-bottom: none;
+    }
+  }
+
+  /* 이렇게 css 파일을 따로 빼놓으면 나중에 한 번에 고치거나 문제를 찾기 쉬움
+  그리고 그만큼 네트워크 트래픽도 적게 쓸 수 있어 좋음 */
